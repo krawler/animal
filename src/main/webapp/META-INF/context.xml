@@ -9,7 +9,7 @@
 				maxIdle="10" 
 				maxWait="10"
 				initialSize="10" 
-				driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+				driverClassName="net.sourceforge.jtds.jdbc.Driver"
 				validationQuery="select 1"
 				testWhileIdle="true"
            		testOnBorrow="true"

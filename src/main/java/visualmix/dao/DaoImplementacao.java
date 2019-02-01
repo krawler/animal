@@ -22,8 +22,7 @@ public abstract class DaoImplementacao<T> implements DaoInterface<T> {
 		super();
 		this.persistenceClass = persistenceClass;
 	}
-	
-	
+		
 	public List<T> findAll() throws Exception {
 		List<T> retorno = null;
 		sessionFactory.getCurrentSession().beginTransaction();

@@ -3,17 +3,13 @@
 		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
 		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 
-<!-- 
-org.hibernate.dialect.PostgreSQLDialect 
-<property name="hibernate.default_schema">public</property>
--->
 <hibernate-configuration>
 	<session-factory name="sessionFactory"> 
 		<property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
 	    <property name="hibernate.connection.driver_class">net.sourceforge.jtds.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:jtds:sqlserver://192.168.25.28;DatabaseName=vm_databsp</property>
+		<property name="hibernate.connection.url">jdbc:jtds:sqlserver://127.0.0.1;DatabaseName=teste_rest</property>
 		<property name="hibernate.connection.username">sa</property>
-        <property name="hibernate.connection.password">1</property>
+        <property name="hibernate.connection.password">onsoft</property>
         <property name="hibernate.connection.pool_size">1</property> 
 		<!-- <property name="hibernate.connection.datasource">java:/comp/env/jdbc/datasource</property> -->		
 		<property name="hibernate.current_session_context_class">thread</property> <!-- Contexto de sessão a ser usado -->
@@ -22,7 +18,7 @@ org.hibernate.dialect.PostgreSQLDialect
 		<property name="hibernate.jdbc.batch_size">100</property> <!-- Lote de SQL -->
 		<property name="hibernate.cache.use_second_level_cache">true</property> <!-- Cache -->
 		<property name="hibernate.transaction.auto_close_session">true</property> <!-- Fecha sessão automaticamente -->
-		<property name="hibernate.hbm2ddl.auto">create</property> 
+		<property name="hibernate.hbm2ddl.auto">update</property>
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
 		<property name="hibernate.generate_statistics">false</property> <!-- Estatisticas de processos SQL -->
@@ -30,7 +26,9 @@ org.hibernate.dialect.PostgreSQLDialect
 		<property name="hibernate.connection.autocommit">false</property>  <!-- Commit Automatico -->
 		<property name="hibernate.connection.pool_size">50</property> <!-- Poll de conexão -->
 		
-	    <mapping class="visualmix.model.Pedido" />	  		 
+	    <mapping class="visualmix.model.Animal" />
+	    <mapping class="visualmix.model.Bioma" />
+	    <mapping class="visualmix.model.Classe" />	  		 
 		
 	</session-factory>
 </hibernate-configuration>
