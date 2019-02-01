@@ -2,9 +2,12 @@ package visualmix.util;
 
 import java.io.Serializable;
 
+import javax.annotation.Resource;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+@Resource
 public class HibernateUtil implements Serializable {
 
 	private static final long serialVersionUID = 1L;
